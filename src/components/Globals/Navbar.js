@@ -11,13 +11,38 @@ Component {
         links:[
             {
                 id:1,
-                path:'/',
-                text:'home'
+                path:'/capabilities',
+                text:'Capabilities'
             },
             {
                 id:2,
                 path:'/about',
                 text:'about'
+            },
+            {
+                id:3,
+                path:'/support',
+                text:'Support'
+            },
+            {
+                id:4,
+                path:'/work',
+                text:'Work'
+            },
+            {
+                id:5,
+                path:'/insights',
+                text:'Insights'
+            },
+            {
+                id:6,
+                path:'/career',
+                text:'Career'
+            },
+            {
+                id:7,
+                path:'/contact',
+                text:'Contact'
             }
         ]
     }
@@ -30,8 +55,6 @@ Component {
     
     render(){
         return(
-            <header>
-                <article className="top">
                     <nav className="navbar navbar-expand-sm bg-ligh navbar-light">
                     <Link to="/" className="logo">
                             <img src={logo} alt="logo" />
@@ -58,10 +81,6 @@ Component {
                             </ul>
                         </div>
                     </nav>
-                        
-                    
-                </article>
-            </header>
         );
     }
 }
