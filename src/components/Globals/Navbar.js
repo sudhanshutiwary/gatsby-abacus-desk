@@ -66,7 +66,7 @@ Component {
                                 <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className={this.state.css}>
-                            <ul className="navbar-nav mx-auto">
+                            <ul className="navbar-nav mx-auto header-menu">
                                 {
                                     this.state.links.map(link =>{
                                         return(

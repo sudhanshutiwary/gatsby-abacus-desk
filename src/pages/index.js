@@ -1,9 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
+import "../components/layout.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from '../components/Globals/BackgroundSection';
+import Strategy from "../components/Home/Strategy";
 
 // import { FaBeer } from 'react-icons/fa';
 
@@ -16,6 +18,7 @@ const IndexPage = ({data}) => (
           styleClass="default-background"/>
         </article>
       </section>
+      <Strategy />
   </Layout>
 );
 

@@ -7,6 +7,8 @@ import "./bootstrap.min.css"
 
 
 import Navbar from "./Globals/Navbar"
+import Footer from "./Globals/Footer"
+
 
 
 const Layout = ({ children }) => 
@@ -19,6 +21,7 @@ const Layout = ({ children }) =>
         </article>
       </header>
   {children}
+  <Footer />
   </div>;
 
 
