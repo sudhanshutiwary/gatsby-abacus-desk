@@ -11,7 +11,7 @@ import Strategy from "../components/Home/Strategy";
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home " />
       <section className="main-slider">
         <article className="main-contant">
           <BackgroundSection img={data.img.childImageSharp.fluid} title="default title"
@@ -37,3 +37,4 @@ export const query = graphql`
 `;
 
 export default IndexPage
+

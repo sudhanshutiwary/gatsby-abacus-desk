@@ -9,7 +9,7 @@ export default function Strategy(){
                     <div className="col-md-12 mx-auto text-center">
                         <div className="Strategy">
                             <Title title="Strategy &amp; Execution"></Title>
-                        <p>We are relentlessly customer-centric, for both you – our customers, and for your customers.
+                            <p>We are relentlessly customer-centric, for both you – our customers, and for your customers.
                             <br /> So every professional service we provide has a ton of R&amp;D and years of experience behind it.
                             <br /> From web UIs to complex ERP systems, we are capable of providing what your business needs.</p>
 
