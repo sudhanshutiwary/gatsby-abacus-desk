@@ -41,7 +41,6 @@ return(
 );
 }
 
-
 BackgroundSection.defaultProps = {
     title:"Business Process Automation <br> with Cloud-Based CRM & ERP",
     styleClass:"default-background"

@@ -5,4 +5,3 @@ export default function Title({title}){
         <h2>{title}</h2>
     );
 }
-
