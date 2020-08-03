@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from '../components/Globals/BackgroundSection';
 import Strategy from "../components/Home/Strategy";
+import Client from "../components/Home/Client";
+
 
 // import { FaBeer } from 'react-icons/fa';
 
@@ -19,6 +21,7 @@ const IndexPage = ({data}) => (
         </article>
       </section>
       <Strategy />
+      <Client />
   </Layout>
 );
 

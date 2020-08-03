@@ -140,3 +140,16 @@ footer:before {
     top: 0;
     background: linear-gradient(to top, #000 -2%, #00000033);
 }
+section.client {
+    padding: 90px 0px;
+}
+footer .menu-contant h2 {
+    font-size: 55px;
+    padding: 0px;
+}
+.menu-contant h2 {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
