@@ -14,7 +14,7 @@ export default class Navbar extends Component {
       }
     });
     $(document).ready(function () {
-      $('ul.navbar-nav.header-menu li a').click(function (e) {
+      $('ul.navbar-nav.header-menu li a.expandable').click(function (e) {
 
         $('li.active').removeClass('active');
 
