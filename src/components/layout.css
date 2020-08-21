@@ -63,8 +63,7 @@ ul.subMenu {
     display: none;
     z-index: 999;
     opacity: 1;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 0px 10px;
     position: absolute;
     left: 0;
     right: 0;
@@ -114,6 +113,7 @@ ul.subMenu li ul.subsubMenu {
 
 li.nav-item.active ul.subMenu {
     display: block;
+    border-bottom: #005197 solid 3px;
 }
 
 nav.navbar.navbar-expand-sm.bg-ligh.navbar-light {
@@ -186,10 +186,43 @@ ul.subsubMenu li a {
     font-size: 22px;
 }
 
-a.nav-link.text-capitalize.expandable {
+a.nav-link.text-capitalize.expandable:after {
     background-image: url('../images/drop-down-arrow.svg');
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: center right;
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: -15px;
+    width: 30px;
+    height: 60px;
+    background-size: 25px;
+    filter: brightness(6%) invert(31) grayscale(60);
+}
+
+a.nav-link.text-capitalize.expandable {
+    position: relative;
+}
+
+ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(1),
+ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(3),
+ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(2) {
+    margin-right: 15px;
+}
+
+article.top.selected li.nav-item.nav-item-main a.nav-link.text-capitalize.expandable:after {
+    background-image: url('../images/drop-down-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: -15px;
+    width: 30px;
+    height: 60px;
+    background-size: 25px;
+    -webkit-filter: brightness(6%) invert(31) grayscale(60);
+    filter: brightness(0%) invert(0) grayscale(0);
 }
 
 

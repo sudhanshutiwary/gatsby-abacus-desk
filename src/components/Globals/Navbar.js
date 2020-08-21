@@ -154,11 +154,51 @@ export default class Navbar extends Component {
         text: "about",
         subMenu: [
           {
-            text: `Design.`,
+            text: `Profile.`,
             subSubMenu: [
               {
-                text: `Logo`,
-                path: `/logo`,
+                text: `Our truly unique products and customer-centric approach can help your company remain ahead in the IT race.`,
+              },
+            ],
+          },
+          {
+            text: `Why Us.`,
+            subSubMenu: [
+              {
+                text: `We strive to create a strategic and data-driven advantage for your organization.`,
+              },
+            ],
+          },
+          {
+            text: `Clients.`,
+            subSubMenu: [
+              {
+                text: `We have over 1000 companies across the globe as our clients.`,
+              },
+            ],
+          },
+          {
+            text: `About Us.`,
+            subSubMenu: [
+              {
+                text: `Case Studies`,
+                path: `/Case Studies`,
+              },
+              {
+                text: `Testimonials`,
+                path: `/Testimonials`,
+              },
+              {
+                text: `Infrastructure`,
+                path: `/Infrastructure`,
+              },
+              {
+                text: `Associates`,
+                path: `/Associates`,
+              },
+              {
+                text: `Abacus Experiments`,
+                path: `/Abacus Experiments`,
               },
             ],
           },
@@ -168,6 +208,74 @@ export default class Navbar extends Component {
         id: 3,
         path: "/support",
         text: "Support",
+        subMenu: [
+          {
+            text: `Offices.`,
+            subSubMenu: [
+              {
+                text: `For queries related to our digital services, contact us at any of our global offices.`,
+              },
+            ],
+          },
+          {
+            text: `Submit RFP.`,
+            subSubMenu: [
+              {
+                text: `Thank you for your interest in Abacus digital services. Please fill the RFP form here.`,
+              },
+            ],
+          },
+          {
+            text: `Quick contact.`,
+            subSubMenu: [
+              {
+                text: `info@abacusdesk.co.in`,
+                path: `mailto:info@abacusdesk.co.in`,
+              },
+              {
+                text: `+91 935 005 9390`,
+                path: `tel:+91 935 005 9390`,
+              },
+              {
+                text: `+91 999 985 2209`,
+                path: `tel:+91 999 985 2209`,
+              },
+              {
+                text: `+91 129 402 1258`,
+                path: `tel:+91 129 402 1258`,
+              },
+            ],
+          },
+          {
+            text: `Support.`,
+            subSubMenu: [
+              {
+                text: `Help Desk`,
+                path: `Help Desk`,
+              },
+              {
+                text: `Email Client Setup`,
+                path: `Email Client Setup`,
+              },
+              {
+                text: `Web design tips`,
+                path: `Web design tips`,
+              },
+              {
+                text: `Responsive Site Help`,
+                path: `Responsive Site Help`,
+              },
+              {
+                text: `CPANEL HELP`,
+                path: `CPANEL HELP`,
+              },
+              {
+                text: `Terms & Conditions`,
+                path: `Terms & Conditions`,
+              },
+            ],
+          },
+        ],
       },
       {
         id: 4,
