@@ -1,21 +1,47 @@
-import React from 'react'
-// import { Link } from 'gatsby'
-import Title from '../Globals/Title'
+import React from 'react';
+import Clients from './Clients';
+// import Title from '../Globals/Title';
+import { StaticQuery, graphql } from 'gatsby';
+
+
+const getClient = graphql`{
+    clients:allContentfulClients{
+      edges{
+        node{
+          id
+          title
+          image{
+            fluid(maxHeight: 420){
+              src
+              ...GatsbyContentfulFluid_tracedSVG  
+            }
+          }
+        }
+      }
+    }
+  }`;
+
 export default function Client(){
     return(
-        <section className="client">
+        <StaticQuery query={getClient} 
+          render={data => {
+            return(
+            <section className="client">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 mx-auto text-center">
-                        <div className="Strategy">
-                            <Title title="Clients"></Title>
-                            <p>Over the period of 17 years, we’ve worked with many remarkable brands from all over
-                            <br /> the world and helped them with their IT infrastructure and marketing. Here are some of them:</p>
-
+                        <div className="client-iamges">
+                           {data.clients.edges.map(({ node:client }) => {
+                                return <Clients key={client.id} client={client} />;
+                    
+                                
+                           })}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    )
+        </section>);
+        }} />
+        
+    );
 }

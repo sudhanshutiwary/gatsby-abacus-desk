@@ -17,6 +17,34 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://browser.sentry-cdn.com/5.15.4/bundle.min.js',
+        integrity:
+          'sha384-Nrg+xiw+qRl3grVrxJtWazjeZmUwoSt0FAVsbthlJ5OMpx0G08bqIq3b/v0hPjhB',
+        crossorigin: 'anonymous',
+        onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
+      },
+      options: {
+        src: '/src/js/aos.js', // Change to the script filename
+      },
+      options: {
+        src: '/src/js/cssmenujs.js', // Change to the script filename
+      },
+      options: {
+        src: '/src/js/global.js', // Change to the script filename
+      },
+      options: {
+        src: '/src/js/jquery.min.js.js', // Change to the script filename
+      },
+      options: {
+        src: '/src/js/materialize.min.js', // Change to the script filename
+      },
+      options: {
+        src: '/src/js/owl.carousel.js', // Change to the script filename
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,

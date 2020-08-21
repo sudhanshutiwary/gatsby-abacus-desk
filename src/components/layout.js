@@ -4,26 +4,22 @@ import PropTypes from "prop-types"
 import "./layout.css"
 import "./bootstrap.min.css"
 
-
-
 import Navbar from "./Globals/Navbar"
 import Footer from "./Globals/Footer"
 
-
-
-const Layout = ({ children }) => 
+const Layout = ({ children }) => (
   <div id="site-wrapper">
-      <header>
-        <article className="top">
-          <div className="container">
-            <Navbar />
-          </div>
-        </article>
-      </header>
-  {children}
-  <Footer />
-  </div>;
-
+    <header>
+      <article className="top">
+        <div className="container">
+          <Navbar />
+        </div>
+      </article>
+    </header>
+    {children}
+    <Footer />
+  </div>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
