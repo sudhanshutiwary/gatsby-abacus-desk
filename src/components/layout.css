@@ -43,7 +43,7 @@ ul.navbar-nav .nav-item a {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 0 24px;
+    /* padding: 0 24px; */
     font-size: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -134,6 +134,39 @@ ul.subMenu .col-md-3 {
     padding: 60px 30px 0px 30px;
 }
 
+ul.subsubMenu li a:empty {
+    display: none;
+}
+
+ul.subsubMenu li p:empty {
+    display: none;
+}
+
+ul.subsubMenu li a {
+    color: #fff !important;
+    font-weight: 300 !important;
+    opacity: 0.6;
+    display: block;
+    line-height: 50px;
+    font-size: 22px !important;
+    text-decoration: none;
+}
+
+ul.subsubMenu li p {
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.8;
+    display: block;
+    line-height: 38px;
+    font-size: 20px;
+}
+
+.content-menu>li>a {
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    margin-bottom: 20px;
+}
+
 ul.subMenu .col-md-3:nth-child(1) .content-menu {
     background-color: #ef9b11;
 }
@@ -207,7 +240,7 @@ a.nav-link.text-capitalize.expandable:after {
     top: -18px;
     right: -15px;
     width: 30px;
-    height: 60px;
+    height: 75px;
     background-size: 25px;
     filter: brightness(6%) invert(31) grayscale(60);
 }
@@ -219,7 +252,7 @@ a.nav-link.text-capitalize.expandable {
 ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(1),
 ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(3),
 ul.navbar-nav.header-menu li.nav-item.nav-item-main:nth-child(2) {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 article.top.selected li.nav-item.nav-item-main a.nav-link.text-capitalize.expandable:after {
@@ -231,7 +264,7 @@ article.top.selected li.nav-item.nav-item-main a.nav-link.text-capitalize.expand
     top: -18px;
     right: -15px;
     width: 30px;
-    height: 60px;
+    height: 75px;
     background-size: 25px;
     -webkit-filter: brightness(6%) invert(31) grayscale(60);
     filter: brightness(0%) invert(0) grayscale(0);
@@ -497,75 +530,78 @@ footer .foot-menu-area ul li a:hover {
     color: #ef9b11;
 }
 
+
+/* strategy section */
+
 section.strategy {
     background: #f3f3f3;
     padding: 90px 0px;
 }
 
-section.strategy .strategy-area {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-section.strategy .strategy-area h1 {
+.strategy-area h1 {
+    font-size: 55px;
     text-align: center;
     color: #005197;
     margin-bottom: 20px;
-    font-weight: 900;
-    font-size: 45px;
 }
 
-section.strategy .strategy-area p {
+.strategy-area p {
+    margin-bottom: 50px;
     max-width: 850px;
-    margin: 0 auto;
     text-align: center;
     font-size: 18px;
-    color: #000000;
+    color: #000;
     line-height: 28px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     font-weight: 700;
     padding: 0 20px;
 }
 
-section.strategy .strategies-parts {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    max-width: 1000px;
-    margin: 0 auto;
+.strategy-list {
+    background-color: #fff;
+    display: block;
+    padding: 40px 30px;
+    height: 321px;
+    margin-bottom: 30px;
 }
 
-section.strategy .strategies-parts .strategy-list {
-    background: #fff;
-    margin: 10px;
-    padding: 30px;
-}
-
-section.strategy .strategies-parts .strategy-list h4 {
-    font-size: 24px;
+.strategy-list h4 {
+    font-size: 25px;
     color: #000000;
     text-align: left;
-    font-weight: 700;
-    margin-bottom: 20px;
 }
 
-section.strategy .strategies-parts .strategy-list ul {
-    margin: 0;
-    list-style-type: none;
+section.strategy .container {
+    width: 65%;
 }
 
-section.strategy .strategies-parts .strategy-list ul li a {
-    color: #005197;
-    font-weight: 500;
+.strategy-list ul {
+    list-style: none;
+    padding: 0;
 }
 
-section.strategy .strategies-parts .strategy-list ul li {
+.strategy-list ul li a {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 40px;
     color: #005197;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-section.strategy .strategies-parts .strategy-list img {
-    padding-top: 60px;
+.strategy-list ul li a:hover {
+    color: #000;
+}
+
+.strategy-list a img:hover {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0%) invert(0) grayscale(0);
+}
+
+.strategy-list a img {
+    width: 80px;
+    height: 80px;
+    margin-top: 130px;
 }
 
 

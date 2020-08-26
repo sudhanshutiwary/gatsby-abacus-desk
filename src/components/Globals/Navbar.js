@@ -7,8 +7,8 @@ import $ from 'jquery';
 export default class Navbar extends Component {
 
   componentDidMount() {
-    $(".navbar-nav.header-menu li a").each(function () {
-      if ($(this).parent().children("ul").length) {
+    $(".navbar-nav.header-menu>li>a").each(function () {
+      if ($(this).parent().children("ul.subMenu").length) {
         $(this).addClass("expandable");
 
       }
@@ -20,6 +20,7 @@ export default class Navbar extends Component {
 
         var $parent = $(this).parent();
         $parent.addClass('active');
+
         e.preventDefault();
         $('.top').addClass('selected');
         $('.logo').find('img').attr('src', `${logo2}`);
@@ -70,7 +71,6 @@ export default class Navbar extends Component {
           },
           {
             text: `Development.`,
-            path: `/logo`,
             subSubMenu: [
               {
                 text: `Website`,
@@ -92,7 +92,6 @@ export default class Navbar extends Component {
           },
           {
             text: `Enterprise.`,
-            path: `/#`,
             subSubMenu: [
               {
                 text: `CRM`,
@@ -122,7 +121,6 @@ export default class Navbar extends Component {
           },
           {
             text: `Marketing.`,
-            path: `/#`,
             subSubMenu: [
               {
                 text: `SEO`,
@@ -157,7 +155,7 @@ export default class Navbar extends Component {
             text: `Profile.`,
             subSubMenu: [
               {
-                text: `Our truly unique products and customer-centric approach can help your company remain ahead in the IT race.`,
+                paragraph: `Our truly unique products and customer-centric approach can help your company remain ahead in the IT race.`,
               },
             ],
           },
@@ -165,7 +163,7 @@ export default class Navbar extends Component {
             text: `Why Us.`,
             subSubMenu: [
               {
-                text: `We strive to create a strategic and data-driven advantage for your organization.`,
+                paragraph: `We strive to create a strategic and data-driven advantage for your organization.`,
               },
             ],
           },
@@ -173,7 +171,7 @@ export default class Navbar extends Component {
             text: `Clients.`,
             subSubMenu: [
               {
-                text: `We have over 1000 companies across the globe as our clients.`,
+                paragraph: `We have over 1000 companies across the globe as our clients.`,
               },
             ],
           },
@@ -213,7 +211,7 @@ export default class Navbar extends Component {
             text: `Offices.`,
             subSubMenu: [
               {
-                text: `For queries related to our digital services, contact us at any of our global offices.`,
+                paragraph: `For queries related to our digital services, contact us at any of our global offices.`,
               },
             ],
           },
@@ -221,7 +219,7 @@ export default class Navbar extends Component {
             text: `Submit RFP.`,
             subSubMenu: [
               {
-                text: `Thank you for your interest in Abacus digital services. Please fill the RFP form here.`,
+                paragraph: `Thank you for your interest in Abacus digital services. Please fill the RFP form here.`,
               },
             ],
           },
@@ -354,7 +352,7 @@ export default class Navbar extends Component {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className={this.state.css}>
-            <ul className="navbar-nav header-menu">
+            <ul className="navbar-nav header-menu main-menu">
               {this.state.links.map(link => (
                 <li key={link.text} className="nav-item nav-item-main">
                   <Link to={link.path} className="nav-link text-capitalize">
@@ -382,6 +380,7 @@ export default class Navbar extends Component {
                                             <Link to={subSubLink.path}>
                                               {subSubLink.text}
                                             </Link>
+                                            <p>{subSubLink.paragraph}</p>
                                           </li>
                                         ))}
                                       </ul>
