@@ -704,4 +704,7 @@ section.strategy .container {
         filter: unset !important;
         top: -5px !important;
     }
+    section.strategy .container {
+        width: 100%;
+    }
 }
