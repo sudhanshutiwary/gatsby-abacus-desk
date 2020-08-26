@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home " />
     <BackgroundSection />
     <Strategies />
-    <Strategy items={data.stratagymenu} />
+    {/* <Strategy items={data.stratagymenu} /> */}
     <Client item={data.clients} />
     <App />
   </Layout>
