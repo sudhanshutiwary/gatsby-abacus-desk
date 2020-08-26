@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Book.eot');
+    src: url('Mallory-Book.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Book.woff2') format('woff2'),
+        url('Mallory-Book.woff') format('woff'),
+        url('Mallory-Book.svg#Mallory-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Bold.eot');
+    src: url('Mallory-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Bold.woff2') format('woff2'),
+        url('Mallory-Bold.woff') format('woff'),
+        url('Mallory-Bold.svg#Mallory-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Black.eot');
+    src: url('Mallory-Black.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Black.woff2') format('woff2'),
+        url('Mallory-Black.woff') format('woff'),
+        url('Mallory-Black.svg#Mallory-Black') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Light.eot');
+    src: url('Mallory-Light.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Light.woff2') format('woff2'),
+        url('Mallory-Light.woff') format('woff'),
+        url('Mallory-Light.svg#Mallory-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Medium.eot');
+    src: url('Mallory-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Medium.woff2') format('woff2'),
+        url('Mallory-Medium.woff') format('woff'),
+        url('Mallory-Medium.svg#Mallory-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory-Thin.eot');
+    src: url('Mallory-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Mallory-Thin.woff') format('woff'),
+        url('Mallory-Thin.svg#Mallory-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+

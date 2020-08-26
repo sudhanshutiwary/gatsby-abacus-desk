@@ -17,6 +17,15 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                custom: {
+                    families: ['Atlas Grotesk', 'Mallory'],
+                    urls: ['/static/font/global.css'],
+                },
+            },
+        },
+        {
             resolve: 'gatsby-plugin-load-script',
             options: {
                 src: 'https://browser.sentry-cdn.com/5.15.4/bundle.min.js',

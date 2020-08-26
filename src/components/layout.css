@@ -1,5 +1,17 @@
 @import url('https://abacusdesk.com/wp-content/themes/abacusdesk/assets/fonts/abacus/atlas-grotesk/stylesheet.css');
 @import url('https://abacusdesk.com/wp-content/themes/abacusdesk/assets/fonts/abacus/mallory/stylesheet.css');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 800;
+    padding: 0;
+    font-family: 'Mallory';
+}
+
 :root {
     --mainBrown: #2d1ef1;
     --mainYellow: #ff9e09;
@@ -11,6 +23,7 @@
 body {
     background-color: var(--mainWhite);
     color: var(--mainDark);
+    font-family: 'Atlas Grotesk' !important;
 }
 
 h1,
@@ -75,6 +88,11 @@ ul.subMenu {
     transform: translate(0, 10px);
     /* transition: opacity 200ms ease-in, transform 200ms ease-in, visibility 200ms ease-in; */
     transition: visibility 0s, opacity 0.5s linear;
+}
+
+li.nav-item.nav-item-main.active>a {
+    border-bottom: #005197 solid 3px;
+    padding-bottom: 0;
 }
 
 .megamenu-sub-mainmenu {
@@ -163,8 +181,9 @@ ul.subsubMenu li p {
 
 .content-menu>li>a {
     font-size: 32px !important;
-    font-weight: 900 !important;
+    font-weight: 800 !important;
     margin-bottom: 20px;
+    font-family: 'mallory';
 }
 
 ul.subMenu .col-md-3:nth-child(1) .content-menu {
@@ -406,6 +425,7 @@ section.contant-part {
     line-height: 28px;
     margin-bottom: 50px;
     font-family: "Atlas Grotesk";
+    font-weight: 500;
 }
 
 footer {
@@ -494,7 +514,7 @@ footer .foot-menu-area {
 }
 
 footer .foot-menu-area h4 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 20px;
@@ -507,7 +527,7 @@ footer .foot-menu-area ul {
 }
 
 footer .foot-menu-area ul li {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     margin-bottom: 5px;
 }

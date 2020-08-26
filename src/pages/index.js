@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import "../components/layout.css"
+
 import $ from "jquery"
 
 import Layout from "../components/layout"
@@ -9,6 +10,7 @@ import BackgroundSection from "../components/Globals/BackgroundSection"
 import Strategy from "../components/Home/Strategy"
 import Strategies from "../components/Home/Strategies"
 import Client from "../components/Home/Client"
+import { FaAngleDown } from "react-icons/fa"
 
 class App extends Component {
   componentDidMount() {
@@ -33,6 +35,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home " />
     <BackgroundSection />
+    <FaAngleDown />
     <Strategies />
     {/* <Strategy items={data.stratagymenu} /> */}
     <Client item={data.clients} />
