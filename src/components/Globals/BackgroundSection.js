@@ -15,6 +15,7 @@ export default function BackgroundSection() {
           display: `flex`,
           justifyContent: `center`,
           alignItems: `center`,
+          backgroundPosition: `100% 50%`,
         }}
       >
         <div className="container">

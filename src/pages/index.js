@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Strategy from "../components/Home/Strategy"
+import Strategies from "../components/Home/Strategies"
 import Client from "../components/Home/Client"
 
 class App extends Component {
@@ -32,8 +33,10 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home " />
     <BackgroundSection />
-    <Strategy />
-    <Client item={data.clients} /> <App />
+    <Strategies />
+    <Strategy items={data.stratagymenu} />
+    <Client item={data.clients} />
+    <App />
   </Layout>
 )
 
@@ -43,6 +46,16 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    stratagymenu:allContentfulStrategyMenu{
+      edges{
+        node{
+          id
+          title
+          url
+          category
         }
       }
     }
