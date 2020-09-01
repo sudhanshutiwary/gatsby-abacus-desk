@@ -12,7 +12,7 @@ import Strategy from "../components/Home/Strategy"
 import FooterMain from "../components/Globals/Footer-main"
 // import Strategies from "../components/Home/Strategies"
 import Client from "../components/Home/Client"
-import { FaAngleDown } from "react-icons/fa"
+// import { FaAngleDown } from "react-icons/fa"
 
 class App extends Component {
   // jquery Testing
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home " />
       <BackgroundSection items={data.homeSlider} />
-      <FaAngleDown />
+      {/* <FaAngleDown /> */}
       <Strategy items={data.allContentfulStrategyRichContent} />
       <Client item={data.clients} />
       <App />
