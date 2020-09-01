@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Navbar from "../components/Globals/Navbar"
 import FooterMain from "../components/Globals/Footer-main"
-import Footer from "../components/Globals/Footer"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+// import Footer from "../components/Globals/Footer"
 
 class logopageDesignTemplate extends React.Component {
     render() {
@@ -55,7 +56,8 @@ class logopageDesignTemplate extends React.Component {
                                 <div className="col-md-8 crm-width">
                                     <div className="content-inner">
                                         <h2>{page.subHeading}</h2>
-                                        <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p>
+                                        {documentToReactComponents(page.content.json)}
+                                        {/* <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p> */}
                                     </div>
                                 </div>
                                 <div className="col-md-2"></div>
@@ -106,9 +108,7 @@ export const pageQuery = graphql`
             }
             subHeading
             content {
-              childContentfulRichText {
-                html
-              }
+                json
             }
             footerContent {
               footerContent
