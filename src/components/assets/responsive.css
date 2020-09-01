@@ -1,0 +1,84 @@
+@media (min-width:768px) and (max-width:991px){
+	
+.menu-contant h1 {
+    font-size: 30px;
+    margin-top: 32px;
+}
+	section.main-baner .container {
+    width: 1170;
+	max-width:100%;
+}
+	
+}
+@media (min-width:991px) and (max-width:1400px){
+	
+	section.main-baner .container {
+    width: 1170px !important;
+	max-width:100% !important;
+}
+}
+@media only screen and (min-width:1024px) {
+	
+.clients .image_wrapper {
+   width: 22% !important;
+   
+}
+}
+
+@media (max-width:768px){
+	
+	
+	
+	.main-baner {
+
+    height: 1095px !important;
+
+}
+	.banner {
+    margin: 110px 0 0 !important;
+}
+	
+	
+.menu-contant h1 {
+    font-size: 30px;
+    margin-top: 32px;
+}
+	
+section.contant-part {
+    padding: 50px 0px;
+}
+	
+	.Strategy h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+		.banner ul li:before {
+    content: '';
+    background: #fff;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    border-radius: 100%;
+    padding: 28px 28px;
+    margin: 2px -9px;
+}
+	.banner ul li {
+    font-size: 16px !important;
+
+
+
+}
+	.gsuite-form {
+    padding-top: 0px !important;
+}
+	.banner ul li img {
+    width: 20% !important;
+   
+}
+	.form-header-wrap {
+    right: 0 !important;
+    position: unset !important;
+    top: 0px !important;
+    filter: drop-shadow(0 0 0.5rem white) !important;
+}
+}

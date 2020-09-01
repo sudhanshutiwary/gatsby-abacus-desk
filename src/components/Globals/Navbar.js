@@ -49,23 +49,23 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `Logo`,
-                path: `/logo`,
+                path: `/logo/`,
               },
               {
                 text: `Corporate Identity`,
-                path: `/corporate-identity`,
+                path: `/corporate-identity/`,
               },
               {
                 text: `Branding Strategy`,
-                path: `/branding-strategy`,
+                path: `/branding-strategy/`,
               },
               {
                 text: `Brochure & Flyers`,
-                path: `/branding-strategy`,
+                path: `/brochure-flyers/`,
               },
               {
                 text: `Email Newsletters`,
-                path: `/branding-strategy`,
+                path: `/email-newsletters/`,
               },
             ],
           },
@@ -74,19 +74,19 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `Website`,
-                path: `/website`,
+                path: `/website/`,
               },
               {
                 text: `E-commerce`,
-                path: `/E-commerce`,
+                path: `/e-commerce/`,
               },
               {
                 text: `CMS`,
-                path: `/CMS`,
+                path: `/cms/`,
               },
               {
                 text: `Mobile apps`,
-                path: `/Mobile apps`,
+                path: `/mobile-apps/`,
               },
             ],
           },
@@ -99,19 +99,19 @@ export default class Navbar extends Component {
               },
               {
                 text: `ERP`,
-                path: `/ERP`,
+                path: `/erp/`,
               },
               {
                 text: `Cloud Hosting`,
-                path: `/Cloud Hosting`,
+                path: `/cloud-hosting/`,
               },
               {
                 text: `Domain management`,
-                path: `/Domain management`,
+                path: `/domain-management/`,
               },
               {
                 text: `Enterprise email`,
-                path: `/Enterprise email`,
+                path: `/enterprise-email/`,
               },
               {
                 text: `G Suite`,
@@ -124,23 +124,23 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `SEO`,
-                path: `/SEO`,
+                path: `/seo/`,
               },
               {
                 text: `Social media`,
-                path: `/Social media`,
+                path: `/social-media/`,
               },
               {
                 text: `ORM`,
-                path: `/ORM`,
+                path: `/orm/`,
               },
               {
                 text: `Email marketing`,
-                path: `/Email marketing`,
+                path: `/email-marketing/`,
               },
               {
                 text: `PPC advertising`,
-                path: `/PPC advertising`,
+                path: `/ppc-advertising/`,
               },
             ],
           },
@@ -292,7 +292,7 @@ export default class Navbar extends Component {
       },
       {
         id: 7,
-        path: "/contact",
+        path: "/contact-us/",
         text: "Contact",
       },
     ],

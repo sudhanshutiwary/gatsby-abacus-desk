@@ -1,81 +1,72 @@
 import React, { Component } from "react";
 import Title from "../Globals/Title";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Arrow from "../../images/arrow_long_right.svg"
+
 import { Link } from "gatsby"
 
 
-// const getCategories = items => {
-//   let temItems = items.map(items => {
-//     return items.node.category;
-//   });
-//   let tempCategories = new Set(temItems);
-//   let categories = Array.from(tempCategories);
-//   categories = [...categories];
-//   return categories;
-// }
 
 export default class Strategy extends Component {
   constructor(props) {
+
     super(props);
     this.state = {
       items: props.items.edges,
       strategyItems: props.items.edges,
-      // categories: getCategories(props).items.edges
+
     };
+
   }
+
   render() {
+
+
     if (this.state.items.length > 0) {
       return (
-        <section className="contant-part">
+        <section className="strategy">
           <div className="container">
             <div className="row">
-              <div className="col-md-12 mx-auto text-center">
-                <div className="Strategy">
-                  <Title title="Strategy &amp; Execution"></Title>
+              <div className="col-md-12">
+                <div className="strategy-area">
+                  <h1>Strategy & Execution</h1>
                   <p>
-                    We are relentlessly customer-centric, for both you – our
-                    customers, and for your customers.
-                <br /> So every professional service we provide has a ton of
-                R&amp;D and years of experience behind it.
-                <br /> From web UIs to complex ERP systems, we are capable of
-                providing what your business needs.
+                    We are relentlessly customer-centric, for both you – our customers,
+                    and for your customers. So every professional service we provide has
+                    a ton of R&D and years of experience behind it.From web UIs to
+                    complex ERP systems, we are capable of providing what your business
+                    needs.
               </p>
                 </div>
               </div>
-              {/* categories */}
-              {/* <div className="categories-name">
-                {this.state.categories.map((category, index) => {
-                  return (
-                    <div className="cat-name" key={index}>
-                      {category}
+            </div>
+            <div className="row">
+              {this.state.items.map(({ node }) => {
+                return (
+                  <div key={node.id} className="col-md-4">
+                    <div className="strategy-list">
+                      <h4>{node.title}</h4>
+                      <ul><li>
+                        {documentToReactComponents(node.content.json)}
+                      </li></ul>
+                      {/* {node.title}
+                        {documentToReactComponents(node.content.json)} */}
                     </div>
-
-                  );
-                })}
-              </div> */}
-              {/* items */}
-              <div className="stratagylink">
-                {this.state.strategyItems.map(({ node }) => {
-                  return (
-                    <div key={node.id} className="col-md-3">
-                      <div className="strategymenu-sec">
-                        <Link to={node.url} className="">
-                          {node.title}
-                        </Link>
-                        <p>{node.category}</p>
-                        <p>{node.test}</p>
-                      </div>
-                    </div>
-                  )
-                })}
+                  </div>
+                )
+              })}
+              <div className="col-md-4">
+                <div className="strategy-list">
+                  <h4>View our Work.</h4>
+                  <a href="/work">
+                    <img src={Arrow} alt="Arrow" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
-      );
-    }
-    else {
-      return (
-        <div>hioii</div>
       );
     }
 

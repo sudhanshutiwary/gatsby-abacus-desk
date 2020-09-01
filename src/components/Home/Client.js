@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 
 const getClient = graphql`{
-  clients:allContentfulClients{
+  clients:allContentfulClients(sort: {fields: updatedAt, order: ASC}){
     edges{
       node{
         id
@@ -58,6 +58,7 @@ export default function Client() {
           </section>
         );
       }} />
+
 
   );
 }
