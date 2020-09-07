@@ -60,7 +60,7 @@ class logopageDesignTemplate extends Component {
                                             <h2>{page.subHeading}</h2>
                                         )}
                                         {/* {documentToReactComponents(page.content.json)} */}
-                                        <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p>
+                                        {/* <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p> */}
                                     </div>
                                 </div>
                                 <div className="col-md-2"></div>

@@ -11,7 +11,7 @@ class blogPostTemplate extends Component {
     return (
       <layout location={this.props.location} title={post.title}>
         <h1>{post.title}</h1>
-        <p dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }}></p>
+        {/* <p dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }}></p> */}
       </layout>
     )
   }

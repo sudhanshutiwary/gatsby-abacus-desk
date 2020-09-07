@@ -60,7 +60,7 @@ class aboutpageDesignTemplate extends Component {
                                             <h2>{aboutPage.subHeading}</h2>
                                         )}
                                         {/* {documentToReactComponents(aboutPage.content.json)} */}
-                                        <p dangerouslySetInnerHTML={{ __html: aboutPage.content.childContentfulRichText.html }}></p>
+                                        {/* <p dangerouslySetInnerHTML={{ __html: aboutPage.content.childContentfulRichText.html }}></p> */}
                                     </div>
                                 </div>
                                 <div className="col-md-2"></div>
