@@ -5,7 +5,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-weight: 800;
     padding: 0;
     font-family: 'Mallory';
 }
@@ -31,7 +30,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-weight: 800 !important;
     padding: 0;
 }
 
@@ -199,6 +197,52 @@ ul.subMenu .col-md-3:nth-child(3) .content-menu {
 ul.subMenu .col-md-3:nth-child(4) .content-menu {
     background-color: #0a1128;
 }
+
+ul.subsubMenu li div div.sign-more a:not([href]) {
+    display: none;
+}
+
+.icon-border {
+    position: absolute;
+    bottom: 40px;
+}
+
+.icon-border .sign-more {
+    width: 72px;
+    height: 72px;
+    border: solid 2px #fff;
+    border-radius: 100%;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.icon-border .sign-more a {
+    line-height: 40px;
+}
+
+.menu-main-div .content-menu a {
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.8;
+    display: block;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+.icon-border .sign-more img {
+    filter: brightness(6%) invert(31) grayscale(60);
+    position: relative;
+    top: 13px;
+}
+
+
+/* ul.subMenu li .more-arrow-sign .sign-more a img:empty {
+    display: none;
+}
+
+ul.subMenu li .more-arrow-sign .sign-more a img:empty ul.subMenu li .more-arrow-sign {
+    display: none;
+} */
 
 .content-menu li a.expandable {
     font-size: 32px;
@@ -678,6 +722,16 @@ section.main-slider.inner-banner article.slider-banner {
     right: 0;
 }
 
+section.main-slider.inner-banner article.slider-banner:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000001a;
+    top: 0;
+}
+
 article.internalmain-contant {
     width: 100%;
     height: 670px;
@@ -703,8 +757,9 @@ article.internalmain-contant .container .row .col-md-12 {
 
 .banner-menu-contant h1 {
     text-align: center;
-    font-size: 62px;
+    font-size: 48px;
     color: #fff;
+    font-weight: 800;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -713,7 +768,7 @@ article.internalmain-contant .container .row .col-md-12 {
     left: 0;
     bottom: 0;
     width: 240px;
-    z-index: 99999;
+    z-index: 1;
 }
 
 .innerbanner-breadcrumb {
@@ -760,6 +815,15 @@ article.internalmain-contant .container .row .col-md-12 {
 }
 
 .content-inner p h3 {
+    color: #005197;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 500 !important;
+    line-height: 34px;
+}
+
+.content-inner h3 {
     color: #005197;
     font-size: 24px;
     margin-top: 0px;
@@ -954,6 +1018,318 @@ button.contact-submit-btn:hover {
 
 
 /* contact page end*/
+
+
+/* career page */
+
+.creer-page-head h2 {
+    color: #005197;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+}
+
+input.file-field-full {
+    margin-bottom: 20px !important;
+    padding-left: 19px !important;
+    box-sizing: inherit !important;
+    background: #fff !important;
+    height: 45px !important;
+    border: solid 1px #c3c3c3 !important;
+    width: 50%;
+    padding: 6px;
+}
+
+
+/* career page end */
+
+
+/* insight page */
+
+section.insight-content-part {
+    background: #f3f3f3;
+    padding: 50px 0;
+}
+
+.insight-main-content {
+    background-color: #fff;
+}
+
+.insight-page-head h2 {
+    background-color: #FFF;
+    border-bottom: 2px dashed #d3d5d7;
+    box-shadow: 0 0 5px 0 #ffffff;
+    position: relative;
+    padding: 30px;
+    margin-bottom: 10px;
+    line-height: initial;
+    font-size: 22px;
+    color: #005197;
+    font-weight: 500;
+}
+
+.insight-img img {
+    width: 100%;
+}
+
+.insight-content {
+    background-color: #FFF;
+    border-bottom: 3px solid #d3d5d7;
+    box-shadow: 0 0 5px 0 #ffffff;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 30px;
+}
+
+.insight-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.insight-content a {
+    color: #c71010;
+    text-decoration: none;
+}
+
+
+/* insight page end*/
+
+
+/* work page */
+
+section.work-content-part {
+    background: #f3f3f3;
+    padding: 90px 0px;
+}
+
+.select-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.select-box {
+    background: #fff;
+    width: 92%;
+    background-color: #fff;
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: left;
+    box-shadow: 0 0 1.25rem rgba(2, 2, 22, 0.1);
+    padding: 1.25rem 2.25rem 2px;
+    box-sizing: content-box;
+    margin-top: -8.9375rem;
+    margin-bottom: 2.5rem;
+    z-index: 999;
+    position: relative;
+    display: flex;
+}
+
+.select-box ul.tabs {
+    white-space: inherit;
+    text-align: left;
+    overflow: inherit;
+    height: inherit;
+    width: 89%;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.select-box ul.tabs li.tab {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    line-height: inherit;
+    height: inherit;
+    padding-left: 7px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: none;
+    color: #111;
+    position: relative;
+    margin-right: 60px;
+    text-transform: uppercase;
+}
+
+.select-box ul.tabs li.tab:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    border: solid 2px #e6e6e6;
+    border-radius: 20px;
+}
+
+.select-box ul.tabs li.tab.current:before {
+    background: transparent;
+    color: #019EE3;
+    border: solid 2px #019EE3;
+}
+
+.select-box ul.tabs li.tab.current {
+    background: transparent;
+    color: #019EE3;
+}
+
+.our-work-heading h2 {
+    color: #232323;
+    font-size: 1.25rem;
+    font-weight: normal;
+    letter-spacing: 0.3125rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.our-work-heading {
+    text-align: center;
+    padding: 20px 0px 10px;
+    border-bottom: #005197 solid 3px;
+    margin-bottom: 20px;
+}
+
+.business-items {
+    background: #fff;
+    padding: 0px 0px 30px;
+    margin-bottom: 50px;
+    box-shadow: rgba(2, 2, 22, 0.2) 0px 2px 25px;
+}
+
+.hover-like {
+    position: relative;
+}
+
+.business-items .img-work {
+    height: 388px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: solid 1px #e8e8e8;
+}
+
+.img-work .gatsby-image-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 0px !important;
+}
+
+.business-items .img-work img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0px !important;
+}
+
+.overlay-in {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(#2897a987, #25a0dda1);
+    width: 100%;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+
+.hover-like:hover .right-hover svg {
+    animation: slideAround 0.4s ease-in-out 0.2s;
+}
+
+@keyframes slideAround {
+    0% {
+        transform: translateX(0);
+        opacity: 1
+    }
+    50% {
+        transform: translateX(200%);
+        opacity: 0
+    }
+    50.1% {
+        transform: translateX(-200%);
+        opacity: 0
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.work-page-detail a:hover {
+    text-decoration: none;
+}
+
+.select-box ul.tabs li.tab.current:after {
+    content: "";
+    background: url(../images/check_icon.svg) no-repeat;
+    position: absolute;
+    left: -32px;
+    height: 25px;
+    width: 25px;
+    background-size: 28px;
+    top: -4px;
+}
+
+.hover-like:hover .overlay-in {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay-in p {
+    position: relative;
+    font-size: 26px;
+    color: #fff;
+    top: 22%;
+    left: 20px;
+    width: 64%;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.right-hover {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 100%;
+    right: 45px;
+    bottom: -14px;
+    box-shadow: rgba(35, 35, 35, 0.15) 2px 2px 8px;
+    text-align: center;
+}
+
+.right-hover svg {
+    position: relative;
+    top: 33%;
+    color: #37b1e2;
+    font-size: 17px;
+}
+
+.business-items h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+    font-weight: 800;
+    text-align: left;
+    color: #333;
+    padding: 27px 40px 10px 20px;
+    height: 50px;
+}
+
+
+/* work page end */
 
 
 /* Resposive */

@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from "../../images/logo.png"
 import logo2 from "../../images/abacus-full.png"
+import Icon from "../../images/menu-icon.png"
+
 import $ from 'jquery';
 
 export default class Navbar extends Component {
@@ -156,6 +158,9 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 paragraph: `Our truly unique products and customer-centric approach can help your company remain ahead in the IT race.`,
+                icon: `${Icon}`,
+                iconLink: `/company-profile/`,
+                iconClass: `icon-border`
               },
             ],
           },
@@ -164,6 +169,9 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 paragraph: `We strive to create a strategic and data-driven advantage for your organization.`,
+                icon: `${Icon}`,
+                iconLink: `/Why-Us/`,
+                iconClass: `icon-border`
               },
             ],
           },
@@ -172,6 +180,9 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 paragraph: `We have over 1000 companies across the globe as our clients.`,
+                icon: `${Icon}`,
+                iconLink: `/logo/`,
+                iconClass: `icon-border`
               },
             ],
           },
@@ -188,15 +199,15 @@ export default class Navbar extends Component {
               },
               {
                 text: `Infrastructure`,
-                path: `/Infrastructure`,
+                path: `/infrastructure/`,
               },
               {
                 text: `Associates`,
-                path: `/Associates`,
+                path: `/associates/`,
               },
               {
                 text: `Abacus Experiments`,
-                path: `/Abacus Experiments`,
+                path: `/abacus-experiments/`,
               },
             ],
           },
@@ -249,11 +260,11 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `Help Desk`,
-                path: `Help Desk`,
+                path: `#`,
               },
               {
                 text: `Email Client Setup`,
-                path: `Email Client Setup`,
+                path: `/email-client-setup/`,
               },
               {
                 text: `Web design tips`,
@@ -261,15 +272,15 @@ export default class Navbar extends Component {
               },
               {
                 text: `Responsive Site Help`,
-                path: `Responsive Site Help`,
+                path: `/responsive-site-help/`,
               },
               {
                 text: `CPANEL HELP`,
-                path: `CPANEL HELP`,
+                path: `/cpanel-help/`,
               },
               {
                 text: `Terms & Conditions`,
-                path: `Terms & Conditions`,
+                path: `/terms-conditions/`,
               },
             ],
           },
@@ -282,7 +293,7 @@ export default class Navbar extends Component {
       },
       {
         id: 5,
-        path: "/insights",
+        path: "/insight/",
         text: "Insights",
       },
       {
@@ -381,6 +392,13 @@ export default class Navbar extends Component {
                                               {subSubLink.text}
                                             </Link>
                                             <p>{subSubLink.paragraph}</p>
+                                            <div class={subSubLink.iconClass}>
+                                              <div className="sign-more">
+                                                <Link to={subSubLink.iconLink}>
+                                                  <img src={subSubLink.icon} />
+                                                </Link>
+                                              </div>
+                                            </div>
                                           </li>
                                         ))}
                                       </ul>
