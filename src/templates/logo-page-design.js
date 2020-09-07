@@ -5,12 +5,9 @@ import FooterMain from "../components/Globals/Footer-main"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 // import Footer from "../components/Globals/Footer"
 
-class logopageDesignTemplate extends React.Component {
+class logopageDesignTemplate extends Component {
     render() {
         const page = this.props.data.contentfulPage
-        const pagesubhead = this.props.data.contentfulPage.subHeading
-        const content = this.props.data.contentfulPage.content
-
         return (
             <layout location={this.props.location} title={page.title}>
                 <header>
