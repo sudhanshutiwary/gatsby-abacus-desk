@@ -75,9 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   subHeading
                   content {
-                    childContentfulRichText {
-                      html
-                    }
+                    json
                   }
                   footerContent {
                     footerContent
@@ -98,9 +96,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   subHeading
                   content {
-                    childContentfulRichText {
-                      html
-                    }
+                    json
                   }
                 }
               }
@@ -111,9 +107,7 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   slug
                   content {
-                    childContentfulRichText {
-                      html
-                    }
+                    json
                   }
                   image {
                     fluid {
