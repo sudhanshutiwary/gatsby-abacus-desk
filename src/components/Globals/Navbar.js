@@ -255,7 +255,6 @@ export default class Navbar extends Component {
               },
             ],
           },
-
           {
             text: `Support.`,
             subSubMenu: [

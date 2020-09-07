@@ -51,6 +51,7 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 }
+
 export const query = graphql`
   {
     img: file(relativePath: { eq: "homebackground.jpg" }) {
