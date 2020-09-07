@@ -65,7 +65,6 @@ class Work extends Component {
                                 backgroundSize: `cover`,
                                 display: `flex`,
                                 alignItems: `center`,
-                                backgroundSize: `cover`,
                                 backgroundRepeat: `no-repeat`,
                                 backgroundPosition: `center center`,
                             }}
@@ -103,7 +102,8 @@ class Work extends Component {
 
                                                         <li className={"tab tab" + category} handleChange={this.handleChange} type="button"
                                                             key={index}
-                                                            onClick={() => { this.handleItems(category) }} >
+                                                            onClick={() => { this.handleItems(category) }}
+                                                            onKeyDown={this.handleKeyDown} >
                                                             {category}
                                                         </li>
                                                     );

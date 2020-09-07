@@ -6,7 +6,6 @@ import "./bootstrap.min.css"
 // import "../static/fonts/stylesheet.css"
 
 import Navbar from "./Globals/Navbar"
-import Footer from "./Globals/Footer"
 
 const Layout = ({ children }) => (
   <div id="site-wrapper">

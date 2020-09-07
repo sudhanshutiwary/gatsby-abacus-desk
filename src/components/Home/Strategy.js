@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Title from "../Globals/Title";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+// import Title from "../Globals/Title";
+// import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Arrow from "../../images/arrow_long_right.svg"
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"/
 
 
 

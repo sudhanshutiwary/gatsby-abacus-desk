@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { graphql } from "gatsby"
 import { Carousel } from "react-bootstrap"
 import Banner from "../../images/banner.jpg"
 

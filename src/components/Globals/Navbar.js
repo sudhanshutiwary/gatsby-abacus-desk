@@ -395,7 +395,7 @@ export default class Navbar extends Component {
                                             <div class={subSubLink.iconClass}>
                                               <div className="sign-more">
                                                 <Link to={subSubLink.iconLink}>
-                                                  <img src={subSubLink.icon} />
+                                                  <img src={subSubLink.icon} alt="icon" />
                                                 </Link>
                                               </div>
                                             </div>
@@ -409,7 +409,7 @@ export default class Navbar extends Component {
                           ))}
 
                           <div class="cross-item">
-                            <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" />
+                            <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" alt="cross" />
                           </div>
                         </div>
                       </div>

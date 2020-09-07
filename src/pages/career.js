@@ -28,7 +28,6 @@ class Career extends Component {
                                         backgroundSize: `cover`,
                                         display: `flex`,
                                         alignItems: `center`,
-                                        backgroundSize: `cover`,
                                         backgroundRepeat: `no-repeat`,
                                         backgroundPosition: `center center`,
                                     }}

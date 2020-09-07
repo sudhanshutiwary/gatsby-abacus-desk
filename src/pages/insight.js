@@ -26,7 +26,6 @@ class Insight extends Component {
                                 backgroundSize: `cover`,
                                 display: `flex`,
                                 alignItems: `center`,
-                                backgroundSize: `cover`,
                                 backgroundRepeat: `no-repeat`,
                                 backgroundPosition: `center center`,
                             }}
@@ -61,7 +60,7 @@ class Insight extends Component {
                                                     <div className="insight-page-head">
                                                         <h2>{node.title}</h2> </div>
                                                     <div className="insight-img">
-                                                        <img src={node.image.fluid.src} />
+                                                        <img src={node.image.fluid.src} alt="" />
                                                     </div>
                                                     <div className="insight-content">
                                                         <p>{node.content.content} </p>
