@@ -25,9 +25,7 @@ export const pageQuery = graphql`
                     title
                     slug
                     content {
-                      childContentfulRichText {
-                        html
-                      }
+                      json
                     }
                     image {
                       fluid {

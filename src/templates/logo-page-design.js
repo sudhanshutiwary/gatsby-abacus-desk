@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-import { Link, graphql } from 'gatsby';
+import { Link, graphql } from "gatsby";
 import Navbar from "../components/Globals/Navbar"
 import FooterMain from "../components/Globals/Footer-main"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 // import Footer from "../components/Globals/Footer"
 
-class logopageDesignTemplate extends Component {
+class logopageDesignTemplate extends React.Component {
     render() {
         const page = this.props.data.contentfulPage
+        const pagesubhead = this.props.data.contentfulPage.subHeading
+        const content = this.props.data.contentfulPage.content
 
         return (
             <layout location={this.props.location} title={page.title}>
@@ -59,7 +61,7 @@ class logopageDesignTemplate extends Component {
                                         {page.subHeading && (
                                             <h2>{page.subHeading}</h2>
                                         )}
-                                        {/* {documentToReactComponents(page.content.json)} */}
+                                        {documentToReactComponents(page.content.json)}
                                         {/* <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p> */}
                                     </div>
                                 </div>
@@ -115,9 +117,7 @@ export const pageQuery = graphql`
             }
             subHeading
             content {
-                childContentfulRichText {
-                    html
-                  }
+                json
             }
             footerContent {
               footerContent
