@@ -3,7 +3,6 @@ import Clients from './Clients';
 import Title from '../Globals/Title';
 import { StaticQuery, graphql } from 'gatsby';
 
-
 const getClient = graphql`{
   clients:allContentfulClients(sort: {fields: updatedAt, order: ASC}){
     edges{

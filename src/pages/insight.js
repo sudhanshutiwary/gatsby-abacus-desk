@@ -4,6 +4,7 @@ import Footer from "../components/Globals/Footer"
 import { Link } from "gatsby"
 import Insights from "../images/Insights.jpg"
 
+
 class Insight extends Component {
     constructor(props) {
         super(props);

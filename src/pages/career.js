@@ -129,7 +129,6 @@ class Career extends Component {
     }
 }
 
-
 const CareerPage = ({ data }) => {
     return (
         <>

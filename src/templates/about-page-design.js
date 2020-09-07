@@ -76,7 +76,6 @@ class aboutpageDesignTemplate extends React.Component {
             </layout>
         )
     }
-
 }
 export default aboutpageDesignTemplate
 

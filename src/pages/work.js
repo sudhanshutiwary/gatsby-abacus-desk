@@ -10,7 +10,6 @@ import { FaLongArrowAltRight } from "react-icons/fa"
 
 
 
-
 const getCategories = items => {
     let tempItems = items.map(items => {
         return items.node.category;
@@ -125,14 +124,7 @@ class Work extends Component {
                                     {this.state.workItems.map(({ node }) => {
                                         return (
                                             <div key={node.id} className="col-md-6">
-                                                {/* <Link to={node.slug}>
-                                                    <div className="work-main-content">
-                                                        <Img fixed={node.image.fixed} />
-                                                        <div className="work-site-name">
-                                                            <h2>{node.title}</h2>
-                                                        </div>
-                                                    </div>
-                                                </Link> */}
+
                                                 <Link to={node.slug}>
                                                     <div className="business-items">
                                                         <div className="hover-like">

@@ -135,6 +135,7 @@ class ContactUs extends Component {
                                                         <input className="text-field-full" name="company-name" id="company-name" placeholder="Company Name*" type="text" />
                                                     </div>
                                                 </div>
+
                                             </div>
                                             <div className="row">
                                                 <div className="col-md-12">
