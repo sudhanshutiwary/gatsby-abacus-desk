@@ -58,7 +58,8 @@ class logopageDesignTemplate extends Component {
                                         {page.subHeading && (
                                             <h2>{page.subHeading}</h2>
                                         )}
-                                        <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p>
+                                        {documentToReactComponents(page.content.json)}
+                                        {/* <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}>{Children}</p> */}
                                     </div>
                                 </div>
                                 <div className="col-md-2"></div>
@@ -91,7 +92,8 @@ class logopageDesignTemplate extends Component {
                 </section>
                 <FooterMain />
 
-
+                {/* <h1>{page.title}</h1>
+                <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p> */}
             </layout>
         )
     }
@@ -112,9 +114,7 @@ export const pageQuery = graphql`
             }
             subHeading
             content {
-                childContentfulRichText {
-                    html
-                  }
+                json
             }
             footerContent {
               footerContent

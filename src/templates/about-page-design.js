@@ -59,8 +59,8 @@ class aboutpageDesignTemplate extends Component {
                                         {aboutPage.subHeading && (
                                             <h2>{aboutPage.subHeading}</h2>
                                         )}
-                                        {/* {documentToReactComponents(aboutPage.content.json)} */}
-                                        <p dangerouslySetInnerHTML={{ __html: aboutPage.content.childContentfulRichText.html }}></p>
+                                        {documentToReactComponents(aboutPage.content.json)}
+                                        {/* <p dangerouslySetInnerHTML={{ __html: aboutPage.content.childContentfulRichText.html }}></p> */}
                                     </div>
                                 </div>
                                 <div className="col-md-2"></div>
@@ -92,9 +92,7 @@ export const pageQuery = graphql`
             }
             subHeading
             content {
-                childContentfulRichText {
-                    html
-                  }
+                json
             }
           }
         }
