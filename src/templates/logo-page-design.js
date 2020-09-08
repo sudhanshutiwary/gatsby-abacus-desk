@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Children } from "react";
 import { Link, graphql } from "gatsby";
 import Navbar from "../components/Globals/Navbar"
 import FooterMain from "../components/Globals/Footer-main"
@@ -58,7 +58,6 @@ class logopageDesignTemplate extends Component {
                                         {page.subHeading && (
                                             <h2>{page.subHeading}</h2>
                                         )}
-                                        {/* {documentToReactComponents(page.content.json)} */}
                                         <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p>
                                     </div>
                                 </div>
@@ -92,8 +91,7 @@ class logopageDesignTemplate extends Component {
                 </section>
                 <FooterMain />
 
-                {/* <h1>{page.title}</h1>
-                <p dangerouslySetInnerHTML={{ __html: page.content.childContentfulRichText.html }}></p> */}
+
             </layout>
         )
     }
