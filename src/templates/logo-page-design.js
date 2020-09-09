@@ -1,4 +1,4 @@
-import React, { Component, Children } from "react";
+import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Navbar from "../components/Globals/Navbar"
 import FooterMain from "../components/Globals/Footer-main"

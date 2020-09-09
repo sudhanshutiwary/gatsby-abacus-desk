@@ -3,14 +3,48 @@ import { Link } from "gatsby"
 import logo from "../../images/logo.png"
 import logo2 from "../../images/abacus-full.png"
 import Icon from "../../images/menu-icon.png"
+import { FaSearch } from "react-icons/fa";
+
+
 
 import $ from 'jquery';
+import jQuery from 'jquery';
 
 export default class Navbar extends Component {
 
   componentDidMount() {
+
+    (function ($) {
+      $(document).ready(function () {
+        $('li.mobile-item-main>a').on('click', function (event) {
+          $(this).parent().toggleClass('menu-open');
+
+        });
+        $('ul.mobile-subMenu>li>a.dropdown-btn').on('click', function (event) {
+          $(this).parent().toggleClass('submenu-open');
+
+        });
+
+      });
+    })(jQuery);
+
+    $(".search").click(function () {
+      $(".open-search").addClass("active");
+    });
+    $(".open-search>.close-search").click(function () {
+      $(".open-search").removeClass("active");
+    });
+
+
     $(".navbar-nav.header-menu>li>a").each(function () {
       if ($(this).parent().children("ul.subMenu").length) {
+        $(this).addClass("expandable");
+
+      }
+    });
+    // for mobile view
+    $("ul.mobile-main-menu>li.mobile-item-main>a").each(function () {
+      if ($(this).parent().children("ul.mobile-subMenu").length) {
         $(this).addClass("expandable");
 
       }
@@ -195,7 +229,7 @@ export default class Navbar extends Component {
               },
               {
                 text: `Testimonials`,
-                path: `/Testimonials`,
+                path: `/testimonials/`,
               },
               {
                 text: `Infrastructure`,
@@ -215,7 +249,7 @@ export default class Navbar extends Component {
       },
       {
         id: 3,
-        path: "/support",
+        path: "#",
         text: "Support",
         subMenu: [
           {
@@ -223,6 +257,9 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 paragraph: `For queries related to our digital services, contact us at any of our global offices.`,
+                icon: `${Icon}`,
+                iconLink: `/offices/`,
+                iconClass: `icon-border`
               },
             ],
           },
@@ -231,6 +268,9 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 paragraph: `Thank you for your interest in Abacus digital services. Please fill the RFP form here.`,
+                icon: `${Icon}`,
+                iconLink: `/submit-rfp/`,
+                iconClass: `icon-border`
               },
             ],
           },
@@ -268,7 +308,7 @@ export default class Navbar extends Component {
               },
               {
                 text: `Web design tips`,
-                path: `Web design tips`,
+                path: `/web-design-tips/`,
               },
               {
                 text: `Responsive Site Help`,
@@ -310,44 +350,18 @@ export default class Navbar extends Component {
   }
   navbarHandler = () => {
     this.state.navbarOpen
-      ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse" })
+      ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse", cssbtn: "menu-toggle-btn" })
       : this.setState({
         navbarOpen: true,
         css: "collapse navbar-collapse show",
+        cssbtn: "menu-toggle-btn active",
       })
   }
 
   render() {
     return (
       <>
-        {/* <nav className="navbar navbar-expand-sm bg-ligh navbar-light">
-          <Link to="/" className="logo">
-            <img src={logo} alt="logo" /> */}
-        {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
-                            Creative Commons (Attribution 3.0 Unported);
-                            https://www.iconfinder.com/webalys */}
-        {/* </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={this.navbarHandler}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button> */}
-        {/* <div className={this.state.css}>
-            <ul className="navbar-nav header-menu">
-              {this.state.links.map(link => {
-                return (
-                  <li key={link.id} className="nav-item">
-                    <Link to={link.path} className="nav-link text-capitalize">
-                      {link.text}
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </div> */}
-        {/* </nav> */}
+
         <nav className="navbar navbar-expand-sm bg-ligh navbar-light">
           <Link to="/" className="logo">
             <img src={logo} alt="logo" />
@@ -356,13 +370,53 @@ export default class Navbar extends Component {
                             https://www.iconfinder.com/webalys */}
           </Link>
           <button
-            className="navbar-toggler"
+            className={"navbar-toggler " + this.state.cssbtn}
             type="button"
             onClick={this.navbarHandler}
           >
-            <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={this.state.css}>
+
+          {/* mebile menu */}
+          <div className={"mobile-menu " + this.state.css}>
+            <ul className="mobile-main-menu">
+              {this.state.links.map(link => (
+                <li key={link.text} className="mobile-item-main">
+                  <Link to={link.path} className="mobile-nav-link text-capitalize">
+                    {link.text}
+                  </Link>
+
+                  {/*Sub menu  */}
+                  {link.subMenu && link.subMenu.length > 0 ? (
+                    <ul className="mobile-subMenu">
+                      {link.subMenu.map(subLink => (
+                        <li key={subLink.text}>
+                          <Link to={subLink.path} className="dropdown-btn">{subLink.text}</Link>
+
+                          {/* Sub Sub Menu */}
+                          {subLink.subSubMenu &&
+                            subLink.subSubMenu.length > 0 ? (
+                              <ul className="mob-subsubMenu">
+                                {subLink.subSubMenu.map(subSubLink => (
+                                  <li key={subSubLink.text}>
+                                    <Link to={subSubLink.path}>
+                                      {subSubLink.text}
+                                    </Link>
+
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* mebile menu end */}
+          {/* desktop menu */}
+          <div className={"desktop-menu " + this.state.css}>
             <ul className="navbar-nav header-menu main-menu">
               {this.state.links.map(link => (
                 <li key={link.text} className="nav-item nav-item-main">
@@ -418,6 +472,22 @@ export default class Navbar extends Component {
                 </li>
               ))}
             </ul>
+            <div className="search-icon search">
+              <FaSearch />
+            </div>
+            <div className="open-search">
+              <div className="close-search">
+                <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" />
+              </div>
+              <div className="search-here">
+                <div className="input-here">
+                  <input class="search-field" placeholder="Search …" type="text" />
+                  <button type="submit" class="search-submit">
+                    <span class="screen-reader-text">Search</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       </>
