@@ -4,6 +4,7 @@ import Banner from "../../images/banner.jpg"
 
 
 export default class BackgroundSection extends Component {
+
   constructor(props) {
 
     super(props);
