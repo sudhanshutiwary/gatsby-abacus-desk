@@ -55,9 +55,9 @@ module.exports = {
         {
             resolve: `gatsby-source-contentful`,
             options: {
-                spaceId: process.env.CONTENTFUL_SPACE_ID,
+                spaceId: `lpk3mv66t5gd`,
                 // Learn about environment variables: https://gatsby.dev/env-vars
-                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+                accessToken: `Ki2KqLUtqpvkOb7-L5gsWplgCYdO7Xp6_PXgkvRdUuc`,
             },
         },
         `@contentful/gatsby-transformer-contentful-richtext`,
@@ -75,6 +75,29 @@ module.exports = {
                 icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             },
         },
+        {
+            resolve: "gatsby-plugin-lunr",
+            options: {
+                languages: [{ name: "en" }],
+                fields: [
+                    { name: "title", store: true, attributes: { boost: 20 } },
+                    { name: "url", store: true },
+                ],
+                boolean: "OR",
+                resolvers: {
+                    ContentfulPage: {
+                        title: node => node.title,
+                        url: node => node.slug,
+                    },
+                },
+                filename: "search_index.json",
+                fetchOptions: {
+                    credentials: 'same-origin'
+                },
+            },
+        },
+
+
 
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline

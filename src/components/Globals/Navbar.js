@@ -4,11 +4,10 @@ import logo from "../../images/logo.png"
 import logo2 from "../../images/abacus-full.png"
 import Icon from "../../images/menu-icon.png"
 import { FaSearch } from "react-icons/fa";
-
-
-
 import $ from 'jquery';
 import jQuery from 'jquery';
+import Search from "../../pages/search";
+
 
 export default class Navbar extends Component {
 
@@ -131,7 +130,7 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `CRM`,
-                path: `/CRM`,
+                path: `/crm/`,
               },
               {
                 text: `ERP`,
@@ -151,7 +150,7 @@ export default class Navbar extends Component {
               },
               {
                 text: `G Suite`,
-                path: `/G Suite`,
+                path: `/g-suite/`,
               },
             ],
           },
@@ -225,7 +224,7 @@ export default class Navbar extends Component {
             subSubMenu: [
               {
                 text: `Case Studies`,
-                path: `/Case Studies`,
+                path: `/case-studies/`,
               },
               {
                 text: `Testimonials`,
@@ -278,20 +277,20 @@ export default class Navbar extends Component {
             text: `Quick contact.`,
             subSubMenu: [
               {
-                text: `info@abacusdesk.co.in`,
-                path: `mailto:info@abacusdesk.co.in`,
+                mailtext: `info@abacusdesk.co.in`,
+                mail: `mailto:info@abacusdesk.co.in`,
               },
               {
-                text: `+91 935 005 9390`,
-                path: `tel:+91 935 005 9390`,
+                mailtext: `+91 935 005 9390`,
+                mail: `tel:+91 935 005 9390`,
               },
               {
-                text: `+91 999 985 2209`,
-                path: `tel:+91 999 985 2209`,
+                mailtext: `+91 999 985 2209`,
+                mail: `tel:+91 999 985 2209`,
               },
               {
-                text: `+91 129 402 1258`,
-                path: `tel:+91 129 402 1258`,
+                mailtext: `+91 129 402 1258`,
+                mail: `tel:+91 129 402 1258`,
               },
             ],
           },
@@ -378,6 +377,12 @@ export default class Navbar extends Component {
 
           {/* mebile menu */}
           <div className={"mobile-menu " + this.state.css}>
+            <Link to="/" className="mobile-logo">
+              <img src={logo2} alt="logo" />
+              {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
+                            Creative Commons (Attribution 3.0 Unported);
+                            https://www.iconfinder.com/webalys */}
+            </Link>
             <ul className="mobile-main-menu">
               {this.state.links.map(link => (
                 <li key={link.text} className="mobile-item-main">
@@ -445,6 +450,7 @@ export default class Navbar extends Component {
                                             <Link to={subSubLink.path}>
                                               {subSubLink.text}
                                             </Link>
+                                            <a href={subSubLink.mail}>{subSubLink.mailtext}</a>
                                             <p>{subSubLink.paragraph}</p>
                                             <div class={subSubLink.iconClass}>
                                               <div className="sign-more">
@@ -475,7 +481,7 @@ export default class Navbar extends Component {
             <div className="search-icon search">
               <FaSearch />
             </div>
-            <div className="open-search">
+            {/* <div className="open-search">
               <div className="close-search">
                 <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" />
               </div>
@@ -487,7 +493,7 @@ export default class Navbar extends Component {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </nav>
       </>
