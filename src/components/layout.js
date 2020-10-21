@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import "./bootstrap.min.css"
-import Searchpage from "../pages/search"
-// import "../static/fonts/stylesheet.css"
 import "../../style/with-lunr.css"
 
 import Navbar from "./Globals/Navbar"
@@ -20,7 +18,6 @@ const Layout = ({ children }) => (
       </article>
     </header>
     {children}
-
   </div>
 )
 

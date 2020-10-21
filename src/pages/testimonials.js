@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Navbar from "../components/Globals/Navbar"
 import Footer from "../components/Globals/Footer"
 import { Link } from "gatsby"

@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => {
       <Client item={data.clients} />
       <div className="open-search">
         <div className="close-search">
-          <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" />
+          <img src="https://abacusdesk.com/wp-content/themes/abacusdesk/assets/img/abacus-icons/close/Shape2x.png" alt="" />
         </div>
         <div className="search-here">
           <div className="input-here">

@@ -193,7 +193,7 @@ class Gsuite extends Component {
                                     <p>24/7 customer support</p>
                                     <p>Security and admin control</p>
                                     <div className="enqry-btn">
-                                        <a href="#">Inquire Now</a>
+                                        <Link to="#">Inquire Now</Link>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@ class Gsuite extends Component {
                                     <p>24/7 customer support</p>
                                     <p>Archive all emails sent by your company</p>
                                     <div className="start-btn">
-                                        <a href="#">Inquire Now</a>
+                                        <Link to="#">Inquire Now</Link>
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@ class Gsuite extends Component {
                                     <p>Hosted S/MIME for Gmail</p>
                                     <p>Enterprise-grade access control with security key enforcement</p>
                                     <div className="start-btn main-st">
-                                        <a href="#">Inquire Now</a>
+                                        <Link to="#">Inquire Now</Link>
                                     </div>
                                 </div>
 

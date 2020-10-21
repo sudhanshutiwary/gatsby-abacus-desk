@@ -279,8 +279,16 @@ ul.subsubMenu li p:empty {
     display: none;
 }
 
+ul.subMenu .col-md-3:nth-child(1) .content-menu li a,
+ul.subMenu .col-md-3:nth-child(1) .content-menu li p,
+ul.subMenu .col-md-3:nth-child(3) .content-menu li a,
+ul.subMenu .col-md-3:nth-child(3) .content-menu li p,
+ul.subMenu .col-md-3:nth-child(1) .content-menu li ul li a {
+    color: #000;
+}
+
 ul.subsubMenu li a {
-    color: #fff !important;
+    color: #fff;
     font-weight: 300 !important;
     opacity: 0.6;
     display: block;

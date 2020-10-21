@@ -95,7 +95,7 @@ const InsightPage = ({ data }) => {
                 </article>
             </header>
             <Insight items={data.allContentfulInsightsPage} />
-            {/* <Footer items={data.allContentfulFooter} /> */}
+            <Footer items={data.allContentfulFooter} />
         </>
     );
 }

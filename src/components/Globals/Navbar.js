@@ -6,7 +6,6 @@ import Icon from "../../images/menu-icon.png"
 import { FaSearch } from "react-icons/fa";
 import $ from 'jquery';
 import jQuery from 'jquery';
-import Search from "../../pages/search";
 
 
 export default class Navbar extends Component {
