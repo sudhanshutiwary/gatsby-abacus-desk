@@ -8,5 +8,5 @@
 
 
 import "./src/components/layout.css"
-import "./src/static/fonts/stylesheet.css"
-import "./src/static/fonts/abacus/atlas-grotesk/stylesheet.css"
+import "./src/fonts/stylesheet.css"
+import "./src/fonts/abacus/atlas-grotesk/stylesheet.css"
