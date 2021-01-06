@@ -13,7 +13,7 @@
     "@elastic/site-search-node": "^1.0.1",
     "algoliasearch": "^4.4.0",
     "apollo-client": "^2.6.10",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "contentful": "^7.14.6",
     "dotenv": "^8.2.0",
